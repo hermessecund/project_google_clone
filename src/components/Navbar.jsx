@@ -8,10 +8,10 @@ export const Navbar = ({ setDarkTheme, darkTheme }) => (
     <div className="flex justify-between items-center space-x-10 w-screen ">
       <Link to="/">
         <p className="text-4xl bg-black-500 font-bold text-green py-1 px-2 dark:bg-white-50 dark:text-black-500">
-          hermes search
+          ∞
         </p>
       </Link>
-      <button type="button" onClick={() => setDarkTheme(!darkTheme)} className="text-xl dark:bg-gray-50 dark:text-gray-500 bg-white border px-1 py-1 hover:shadow-lg">{darkTheme ? '🌕 Light' : '🌑 Night'}</button>
+      <button type="button" onClick={() => setDarkTheme(!darkTheme)} className="text-xl dark:text-gray-500 px-1 py-1 hover:shadow-lg">{darkTheme ? '🌕 Light' : '🌑 Night'}</button>
     </div>
     <Search />
   </div>
