@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-const baseUrl = 'https://google-search1.p.rapidapi.com/api/v1';
+const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
@@ -13,9 +13,11 @@ export const StateContextProvider = ({ children }) => {
 
     const res = await fetch(`${baseUrl}${url}`, {
       method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'google-search1.p.rapidapi.com',
-        'x-rapidapi-key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
+  url: 'https://google-search1.p.rapidapi.com/google-search',
+  params: {hl: 'en', q: 'Avengers+Endgame', gl: 'us'},
+  headers: {
+    'X-RapidAPI-Key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
+    'X-RapidAPI-Host': 'google-search1.p.rapidapi.com'
       },
     });
 
