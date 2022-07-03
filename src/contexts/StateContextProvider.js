@@ -12,16 +12,14 @@ export const StateContextProvider = ({ children }) => {
     setLoading(true);
 
     const res = await fetch(`${baseUrl}${url}`, {
-      method: 'GET',
-  url: 'https://google-search1.p.rapidapi.com/google-search',
-  params: {hl: 'en', q: 'Avengers+Endgame', gl: 'us'},
-  headers: {
-    'X-RapidAPI-Key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
-    'X-RapidAPI-Host': 'google-search1.p.rapidapi.com'
+        method: 'GET',
+        url: 'https://google-search1.p.rapidapi.com/google-search',
+        params: {hl: 'en', q: 'Avengers+Endgame', gl: 'us'},
+        headers: {
+        'X-RapidAPI-Key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
+        'X-RapidAPI-Host': 'google-search1.p.rapidapi.com'
       },
     });
-
-    const data = await res.json();
 
     setResults(data);
     setLoading(false);
