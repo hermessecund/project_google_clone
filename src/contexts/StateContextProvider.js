@@ -18,7 +18,7 @@ export const StateContextProvider = ({ children }) => {
         'x-rapidapi-key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
       },
     });
-	  
+
     const data = await res.json();
 
     setResults(data);
