@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
+const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1/search/q=elon+musk';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
