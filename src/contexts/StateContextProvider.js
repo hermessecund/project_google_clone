@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
+const baseUrl = 'https://google-search1.p.rapidapi.com/google-search';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
@@ -31,7 +31,7 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });',
-        'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
+        'X-RapidAPI-Host': 'google-search1.p.rapidapi.com',
       },
     });
 
