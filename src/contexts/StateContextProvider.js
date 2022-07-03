@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-const baseUrl = 'https://google-search1.p.rapidapi.com/google-search';
+const baseUrl = 'https://google-search1.p.rapidapi.com/api/v1';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
@@ -14,27 +14,11 @@ export const StateContextProvider = ({ children }) => {
     const res = await fetch(`${baseUrl}${url}`, {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'const axios = require("axios");
-
-const options = {
-  method: 'GET',
-  url: 'https://google-search1.p.rapidapi.com/google-search',
-  params: {hl: 'en', q: 'Avengers+Endgame', gl: 'us'},
-  headers: {
-    'X-RapidAPI-Key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
-    'X-RapidAPI-Host': 'google-search1.p.rapidapi.com'
-  }
-};
-
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});',
-        'X-RapidAPI-Host': 'google-search1.p.rapidapi.com',
+        'x-rapidapi-host': 'google-search1.p.rapidapi.com',
+        'x-rapidapi-key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
       },
     });
-
+	  
     const data = await res.json();
 
     setResults(data);
