@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1/search/q=elon+musk';
+const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
@@ -13,9 +13,9 @@ export const StateContextProvider = ({ children }) => {
 
     const res = await fetch(`${baseUrl}${url}`, {
       method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-        'x-rapidapi-key': '314f215117msha3abb1b6c2a8bcdp1bd2bdjsnee6788226a87',
+      headers: { 
+        'X-RapidAPI-Key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
+        'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'
       },
     });
 
