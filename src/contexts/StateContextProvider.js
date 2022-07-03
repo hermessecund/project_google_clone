@@ -20,6 +20,7 @@ export const StateContextProvider = ({ children }) => {
         'X-RapidAPI-Host': 'google-search1.p.rapidapi.com'
       },
     });
+ const data = await res.json();
 
     setResults(data);
     setLoading(false);
