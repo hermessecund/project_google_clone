@@ -13,7 +13,8 @@ export const StateContextProvider = ({ children }) => {
 
     const res = await fetch(`${baseUrl}${url}`, {
       method: 'GET',
-      headers: {'X-RapidAPI-Key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b','X-RapidAPI-Host': 'google-search3.p.rapidapi.com'},
+      headers: {'X-RapidAPI-Key': 'b74d3dd467msh986ed3e030ccf7cp144bd6jsn369069d8f21b',
+                'X-RapidAPI-Host': 'google-search3.p.rapidapi.com'},
     });
 
     const data = await res.json();
